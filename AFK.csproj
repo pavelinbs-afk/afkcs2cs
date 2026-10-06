@@ -7,8 +7,7 @@
     <RootNamespace>AFK</RootNamespace>
     <OutputType>Library</OutputType>
     <LangVersion>latest</LangVersion>
-    <!-- Не копировать CounterStrikeSharp.API:
-         иначе css_plugins reload падает с "Assembly with same name is already loaded". -->
+    <!-- "Assembly with same name is already loaded". -->
     <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>

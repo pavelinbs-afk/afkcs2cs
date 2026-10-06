@@ -17,7 +17,6 @@ public sealed partial class AfkPlugin
 
     private HookResult OnRoundEnd(EventRoundEnd @event, GameEventInfo info)
     {
-        // Между раундами AFK не считаем.
         StopAfkTrackingForPhaseChange();
         Server.NextFrame(TryApplySmartBalanceAtRoundEnd);
         return HookResult.Continue;
