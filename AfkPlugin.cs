@@ -11,8 +11,8 @@ namespace AFK;
 public sealed partial class AfkPlugin : BasePlugin
 {
     public override string ModuleName => "AFK";
-    public override string ModuleAuthor => "AdminPlugin extract";
-    public override string ModuleVersion => "1.0.0";
+    public override string ModuleAuthor => "pRfect";
+    public override string ModuleVersion => "1.0.1";
     public override string ModuleDescription => "AFK → spectator + smart level-based team balance";
 
     /// <summary>AFK: перевод в наблюдатели после N секунд бездействия (только после конца freeze текущего раунда).</summary>
