@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>AFK</AssemblyName>
+    <RootNamespace>AFK</RootNamespace>
+    <OutputType>Library</OutputType>
+    <LangVersion>latest</LangVersion>
+    <!-- Не копировать CounterStrikeSharp.API:
+         иначе css_plugins reload падает с "Assembly with same name is already loaded". -->
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CounterStrikeSharp.API" Version="1.0.366">
+      <PrivateAssets>all</PrivateAssets>
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <Target Name="RemoveCounterStrikeSharpApiFromPluginOutput" AfterTargets="Build">
+    <Delete Files="$(OutputPath)CounterStrikeSharp.API.dll" ContinueOnError="true" />
+    <Delete Files="$(OutputPath)CounterStrikeSharp.API.pdb" ContinueOnError="true" />
+    <Delete Files="$(OutputPath)CounterStrikeSharp.API.xml" ContinueOnError="true" />
+  </Target>
+</Project>

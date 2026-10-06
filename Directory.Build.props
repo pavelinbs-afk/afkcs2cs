@@ -1,0 +1,6 @@
+<Project>
+  <PropertyGroup Condition="'$(MSBuildProjectName)' == 'AFK'">
+    <BaseIntermediateOutputPath>$(MSBuildThisFileDirectory)obj\AFK\</BaseIntermediateOutputPath>
+    <BaseOutputPath>$(MSBuildThisFileDirectory)bin\AFK\</BaseOutputPath>
+  </PropertyGroup>
+</Project>
